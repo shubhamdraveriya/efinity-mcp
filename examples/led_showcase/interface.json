@@ -1,0 +1,102 @@
+{
+    "description":  "edit_interface operations for the Ti375 N1156 Development Kit: 25 MHz CLK_25M_2 -\u003e PLL_TR1 (100 + 50 MHz), LED1..LED6, SW3/SW4",
+    "operations":  [
+                       {
+                           "op":  "create_gpio",
+                           "name":  "clk_25m",
+                           "mode":  "pll_clock_input",
+                           "resource":  "GPIOR_88",
+                           "properties":  {
+                                              "IO_STANDARD":  "3.3 V LVCMOS"
+                                          }
+                       },
+                       {
+                           "op":  "create_block",
+                           "name":  "pll0",
+                           "type":  "PLL",
+                           "resource":  "PLL_TR1",
+                           "properties":  {
+                                              "REFCLK_SOURCE":  "EXTERNAL",
+                                              "EXT_CLK":  "EXT_CLK1",
+                                              "REFCLK_FREQ":  "25",
+                                              "FEEDBACK_MODE":  "LOCAL",
+                                              "LOCKED_PIN":  "pll_locked",
+                                              "CLKOUT0_EN":  "1",
+                                              "CLKOUT0_PIN":  "sys_clk",
+                                              "CLKOUT1_EN":  "1",
+                                              "CLKOUT1_PIN":  "aux_clk"
+                                          }
+                       },
+                       {
+                           "op":  "auto_calc_pll",
+                           "name":  "pll0",
+                           "targets":  {
+                                           "CLKOUT0_FREQ":  100,
+                                           "CLKOUT1_FREQ":  50
+                                       }
+                       },
+                       {
+                           "op":  "create_gpio",
+                           "name":  "led",
+                           "mode":  "output",
+                           "msb":  5,
+                           "lsb":  0,
+                           "properties":  {
+                                              "IO_STANDARD":  "1.8 V LVCMOS",
+                                              "DRIVE_STRENGTH":  "4"
+                                          }
+                       },
+                       {
+                           "op":  "assign_resource",
+                           "name":  "led[0]",
+                           "resource":  "GPIOB_N_41"
+                       },
+                       {
+                           "op":  "assign_resource",
+                           "name":  "led[1]",
+                           "resource":  "GPIOB_P_42"
+                       },
+                       {
+                           "op":  "assign_resource",
+                           "name":  "led[2]",
+                           "resource":  "GPIOB_N_42"
+                       },
+                       {
+                           "op":  "assign_resource",
+                           "name":  "led[3]",
+                           "resource":  "GPIOB_P_33"
+                       },
+                       {
+                           "op":  "assign_resource",
+                           "name":  "led[4]",
+                           "resource":  "GPIOB_P_34"
+                       },
+                       {
+                           "op":  "assign_resource",
+                           "name":  "led[5]",
+                           "resource":  "GPIOB_P_35"
+                       },
+                       {
+                           "op":  "create_gpio",
+                           "name":  "btn_next_n",
+                           "mode":  "input",
+                           "resource":  "GPIOB_P_31",
+                           "properties":  {
+                                              "IO_STANDARD":  "1.8 V LVCMOS",
+                                              "PULL_OPTION":  "WEAK_PULLUP",
+                                              "SCHMITT_TRIGGER":  "1"
+                                          }
+                       },
+                       {
+                           "op":  "create_gpio",
+                           "name":  "btn_pause_n",
+                           "mode":  "input",
+                           "resource":  "GPIOB_P_32",
+                           "properties":  {
+                                              "IO_STANDARD":  "1.8 V LVCMOS",
+                                              "PULL_OPTION":  "WEAK_PULLUP",
+                                              "SCHMITT_TRIGGER":  "1"
+                                          }
+                       }
+                   ]
+}

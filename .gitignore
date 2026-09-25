@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Efinity build outputs if an example is built in place
+examples/**/outflow/
+examples/**/work_*/
+examples/**/*.xml.bak
+examples/**/*.peri.xml.bak
+
+# private release notes (checklist, email draft) - never pushed
+.release/

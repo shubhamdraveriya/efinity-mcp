@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "efinity-mcp"
+version = "0.1.0"
+description = "Unofficial MCP server for the Efinix Efinity FPGA toolchain: build, timing, utilization, STA, Interface Designer, programming"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "Shubham D.", email = "shubhamdraveriya@gmail.com" }]
+requires-python = ">=3.10"
+dependencies = ["mcp>=2.2,<3"]
+keywords = ["mcp", "model-context-protocol", "efinix", "efinity", "fpga", "eda", "titanium", "trion", "topaz", "claude"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+    "Topic :: Software Development :: Embedded Systems",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.urls]
+Homepage = "https://github.com/shubhamdraveriya/efinity-mcp"
+Issues = "https://github.com/shubhamdraveriya/efinity-mcp/issues"
+Changelog = "https://github.com/shubhamdraveriya/efinity-mcp/blob/main/CHANGELOG.md"
+
+[project.scripts]
+efinity-mcp = "efinity_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["efinity: needs a local Efinity installation (runs real builds; slow)"]
+addopts = "-m 'not efinity'"
+
+[tool.ruff]
+line-length = 130
+target-version = "py310"
+extend-exclude = ["examples"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501", "B008"]
+
+[tool.ruff.lint.per-file-ignores]
+# runs under Efinity's own Python; imports Efinity modules lazily after sys.path setup
+"src/efinity_mcp/pt_helper.py" = ["E402"]

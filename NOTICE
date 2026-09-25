@@ -1,0 +1,13 @@
+efinity-mcp
+Copyright 2026 Shubham D.
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This is an independent, community project. It is not made, endorsed, or supported by
+Efinix, Inc. "Efinix", "Efinity", "Titanium", "Trion" and "Topaz" are trademarks of
+Efinix, Inc., used here only to describe what the software works with.
+
+This package contains no Efinix software. It runs the user's own licensed Efinity
+installation (its command-line flow, its bundled Python, and its Interface Designer
+Python API) as separate processes. Use of Efinity remains subject to the Efinix license
+agreement.

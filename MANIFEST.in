@@ -1,0 +1,8 @@
+include CHANGELOG.md CONTRIBUTING.md
+graft tests
+graft examples
+graft docs
+graft scripts
+prune .release
+prune .github
+global-exclude __pycache__ *.py[cod]
