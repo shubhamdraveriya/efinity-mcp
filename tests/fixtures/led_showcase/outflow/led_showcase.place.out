@@ -1,0 +1,134 @@
+           
+           Efinix FPGA Placement and Routing.
+           Version: 2026.1.132 
+           Compiled: May 29 2026.
+           
+           Copyright (C) 2013 - 2026 Efinix, Inc. All rights reserved.
+
+           
+           The Tool Is Based on VPR of University of Toronto,
+           a free open source code under MIT license.
+           
+INFO     : Reading core interface constraints file "C:/work/led_showcase\outflow\led_showcase.interface.csv" [DBMsg::CoreInterfaceConstraintsFileReading]
+INFO     : Successfully read core interface constraints file "C:/work/led_showcase\outflow\led_showcase.interface.csv" [DBMsg::CoreInterfaceConstraintsFileLoadSuccess]
+INFO     : Reading core interface constraints file "C:/work/led_showcase\outflow\led_showcase.interface.csv" [DBMsg::CoreInterfaceConstraintsFileReading]
+INFO     : Successfully read core interface constraints file "C:/work/led_showcase\outflow\led_showcase.interface.csv" [DBMsg::CoreInterfaceConstraintsFileLoadSuccess]
+INFO     : XLR count after merging: 1851
+INFO     : Netlist has 1191 luts, 343 ffs and 503 adders [PackerMsg::NetlistStatistics]
+INFO     : Packed into 1851 clusters with 2.8249595(0.91680175) inputs(outputs) per cluster for a total of 5229(1697) inputs(outputs) [PackerMsg::ClusterPackingStatistics]
+INFO     : Packed into 1851 xlrs with 2.8249595(0.91680175) inputs(outputs) per xlr for a total of 5229(1697) inputs(outputs) [PackerMsg::XLRPackingStatistics]
+INFO     : Packed 0 fracturable DSPs into 0 clusters [PackerMsg::DSPPackingStatistics]
+INFO     : Packing took 0.8528937 seconds [FlowMsg::StageDuration]
+INFO     :     Packing took 0.734375 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Packing virtual memory usage: begin = 60.544 MB, end = 184.724 MB, delta = 124.18 MB [FlowMsg::VMUsage]
+INFO     :     Packing peak virtual memory usage = 184.732 MB [FlowMsg::VMUsage::Peak]
+INFO     : Packing resident set memory usage: begin = 63.376 MB, end = 195.808 MB, delta = 132.432 MB [FlowMsg::RSSUsage]
+INFO     :     Packing peak resident set memory usage = 195.808 MB [FlowMsg::RSSUsage::Peak]
+INFO     : SDC file 'led_showcase.sdc' parsed successfully.
+INFO     : Reading core interface constraints file "C:/work/led_showcase\outflow\led_showcase.interface.csv" [DBMsg::CoreInterfaceConstraintsFileReading]
+INFO     : Successfully read core interface constraints file "C:/work/led_showcase\outflow\led_showcase.interface.csv" [DBMsg::CoreInterfaceConstraintsFileLoadSuccess]
+WARNING  : Synchronizer chain starting at cell u_btn_next/sync[0]~FF is driven by a non-sequential source btn_next_n:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_btn_pause/sync[0]~FF is driven by a non-sequential source btn_pause_n:inpad [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_rst_sys/sync[0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+WARNING  : Synchronizer chain starting at cell u_rst_aux/sync[0]~FF is driven by a non-sequential source GND:O [FlowMsg::SyncHeadDrivenByNonSeq]
+INFO     : Starting Global Placer with 14 threads ...
+            ----------     -------  --------------     -------
+             Iteration       WHPWL Worst Slack (ps) Convergence
+            ----------     -------  --------------     -------
+INFO     :           1      386142            8237         0.5%
+INFO     :           2      263846            8237         1.4%
+INFO     :           3      191428            8142         2.0%
+INFO     :           4      176168            8107         2.3%
+INFO     :           5      153919            8107         3.1%
+INFO     :           6      138956            8021         4.6%
+INFO     :           7      100711            7923        13.2%
+INFO     :           8       66922            7325        42.4%
+INFO     :           9       56401            6708        66.7%
+INFO     :          10       53519            6576        77.0%
+INFO     :          11       53056            6623        78.3%
+INFO     :          12       51925            6699        81.7%
+INFO     :          13       52004            6658        81.7%
+INFO     :          14       51569            6690        82.7%
+INFO     :          15       51441            6861        83.5%
+INFO     :          16       51098            6663        84.8%
+INFO     :          17       50891            6710        85.5%
+INFO     :          18       50562            6775        87.1%
+INFO     :          19       50461            6834        88.1%
+INFO     :          20       50305            6722        89.5%
+INFO     :          21       50604            6873        91.1%
+INFO     :          22       50500            6910        91.6%
+INFO     :          23       50574            6875        92.6%
+INFO     :          24       50659            6778        92.7%
+INFO     :          25       50953            6793        93.6%
+INFO     :          26       51077            6833        93.9%
+INFO     :          27       50939            6730        95.4%
+INFO     :          28       49175            6801        95.8%
+INFO     :          29       49159            6838        97.5%
+INFO     :          30       49213            6799        99.0%
+INFO     :          31       49276            6727        99.4%
+INFO     :          32       49303            6750        99.4%
+INFO     :          33       49433            6750        99.5%
+INFO     :          34       49422            6683        99.8%
+INFO     : GP: best_placement: wpd: 0
+INFO     : Starting Annealer
+            ----------     -------  --------------     -------
+             Iteration       WHPWL  Delay Max (ps)     R Limit
+            ----------     -------  --------------     -------
+INFO     :           0       22783            3165        30.0
+INFO     :           1       21734            3362        29.3
+INFO     :           2       20801            3065        28.0
+INFO     :           3       21037            3230        26.7
+INFO     :           4       20597            3195        25.3
+INFO     :           5       20207            3252        23.7
+INFO     :           6       20333            2924        22.2
+INFO     :           7       20078            2984        20.7
+INFO     :           8       19139            3097        19.2
+INFO     :           9       19429            2936        17.7
+INFO     :          10       18697            2893        16.2
+INFO     :          11       18600            3134        14.9
+INFO     :          12       18560            2866        13.7
+INFO     :          13       18108            2921        12.6
+INFO     :          14       18177            2834        11.5
+INFO     :          15       17896            2831        10.6
+INFO     :          16       18017            3088         9.7
+INFO     :          17       17792            3208         8.8
+INFO     :          18       17788            3106         8.1
+INFO     :          19       17645            3044         7.4
+INFO     :          20       17603            2892         6.8
+INFO     :          21       17290            2944         6.2
+INFO     :          22       17253            2861         5.6
+INFO     :          23       17318            2851         5.0
+INFO     :          24       17182            2870         4.5
+INFO     : DP: best_placement: wpd: 0
+INFO     : Placement successful: 1852 cells are placed
+INFO     : Peak congestion smeared over 4x4 of the chip is 0.759338 at 286,80
+INFO     : Peak congestion smeared over 1/16 of the chip is 0.339139 at 293,74
+INFO     : Peak congestion smeared over 1/4 of the chip is 0.0659776 at 374,0
+INFO     : Congestion-weighted HPWL per net: 12.2313
+INFO     : Post-placement cluster-level checks is successful
+INFO     : Post-placement primitive-level checks is successful
+INFO     : Placement took 3.9010129 seconds [FlowMsg::StageDuration]
+INFO     :     Placement took 14.546875 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Placement virtual memory usage: begin = 73.012 MB, end = 221.684 MB, delta = 148.672 MB [FlowMsg::VMUsage]
+INFO     :     Placement peak virtual memory usage = 379.724 MB [FlowMsg::VMUsage::Peak]
+INFO     : Placement resident set memory usage: begin = 85.324 MB, end = 237.252 MB, delta = 151.928 MB [FlowMsg::RSSUsage]
+INFO     :     Placement peak resident set memory usage = 394.828 MB [FlowMsg::RSSUsage::Peak]
+INFO     : SDC file 'led_showcase.sdc' parsed successfully.
+Maximum possible analyzed clocks frequency
+ Clock Name  Period (ns)  Frequency (MHz)     Edge
+  sys_clk       2.980        335.570         (R-R)
+  aux_clk       2.326        429.923         (R-R)
+
+Geomean max period: 2.633
+
+Setup (Max) Clock Relationship
+  Launch Clock    Capture Clock   Constraint (ns)     Slack (ns)          Edge
+    sys_clk          sys_clk           10.000            7.020           (R-R)
+    aux_clk          aux_clk           20.000           17.674           (R-R)
+
+Hold (Min) Clock Relationship
+  Launch Clock    Capture Clock   Constraint (ns)     Slack (ns)          Edge
+    sys_clk          sys_clk           0.000            0.161            (R-R)
+    aux_clk          aux_clk           0.000            0.161            (R-R)
+
+INFO     : Write Timing Report to "C:/work/led_showcase\outflow/led_showcase.place.timing.rpt" ...

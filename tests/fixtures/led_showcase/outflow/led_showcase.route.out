@@ -1,0 +1,98 @@
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Router Setup
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : [Setup Parallel Routing Scheduler]
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Route Circuit with 14 threads
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Beneficial skew enabled! Optimizing clock skews ... 
+INFO     : Non-legalized beneficial skew improved geomean CPD by 0.00% (from 2508ps to 2508ps)
+INFO     : CSS improved CPD of clock sys_clk by 0.00% (from 2924ps to 2924ps)
+INFO     : CSS improved CPD of clock aux_clk by 0.00% (from 2152ps to 2152ps)
+INFO     : Discretized beneficial skew improved geomean CPD by 0.00% (from 2508ps to 2508ps in 4 iterations and 0.0 sec)
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Overridding delay budgets for 14 synchronizer-related pins
+INFO     : Iter  1: overlap=3808    heapops=401667     (0%) cpd=2924  frr=1.00  msec=144
+INFO     : [Setup Delay Budgets | 22.9 ms]
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Hold Fixing
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Total min wire delay:    558027
+INFO     : Hold fix wire delay:         33
+INFO     : Hold fix delay ratio:     0.01%
+INFO     : Pins requiring hold fix:  0.01%
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Iter  2: overlap=1299    heapops=326545     (36%) cpd=3621  frr=1.24  msec=90
+INFO     : Iter  3: overlap=606     heapops=208466     (60%) cpd=3864  frr=1.32  msec=79
+INFO     : [Rebuild Parallel Routing Scheduler]
+INFO     : Iter  4: overlap=197     heapops=128122     (74%) cpd=3979  frr=1.36  msec=72
+INFO     : Iter  5: overlap=37      heapops=44747      (85%) cpd=3979  frr=1.36  msec=62
+INFO     : Iter  6: overlap=3       heapops=12520      (89%) cpd=4096  frr=1.40  msec=53
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Beneficial skew enabled! Optimizing clock skews ... 
+INFO     : Non-legalized beneficial skew improved geomean CPD by 0.00% (from 3079ps to 3079ps)
+INFO     : CSS improved CPD of clock sys_clk by 0.00% (from 4096ps to 4096ps)
+INFO     : CSS improved CPD of clock aux_clk by 0.00% (from 2316ps to 2316ps)
+INFO     : Discretized beneficial skew improved geomean CPD by 0.00% (from 3079ps to 3079ps in 1 iterations and 0.0 sec)
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Iter  7: overlap=0       heapops=3299       (90%) cpd=4096  frr=1.40  msec=78
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Routing Result
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Routing Succeeded in 1.61 seconds taking 7 iterations! 
+INFO     : 
+INFO     : First iteration critical path delay = 2.924 ns 
+INFO     : Last iteration critical path delay  = 4.096 ns (ratio = 1.40)
+INFO     : Max Routing Heap Size = 1,321
+INFO     : Routing trace written to file 'C:/work/led_showcase\outflow\led_showcase.troutingtraces' 
+INFO     : ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INFO     : Routing took 6.3293001 seconds [FlowMsg::StageDuration]
+INFO     :     Routing took 9.6875 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Routing virtual memory usage: begin = 118.22 MB, end = 731.88 MB, delta = 613.66 MB [FlowMsg::VMUsage]
+INFO     :     Routing peak virtual memory usage = 1268.496 MB [FlowMsg::VMUsage::Peak]
+INFO     : Routing resident set memory usage: begin = 138.264 MB, end = 628.952 MB, delta = 490.688 MB [FlowMsg::RSSUsage]
+INFO     :     Routing peak resident set memory usage = 1145.172 MB [FlowMsg::RSSUsage::Peak]
+           ***** Beginning stage final timing analysis ... *****
+INFO     : SDC file 'led_showcase.sdc' parsed successfully.
+Maximum possible analyzed clocks frequency
+ Clock Name  Period (ns)  Frequency (MHz)     Edge
+  sys_clk       4.206        237.756         (R-R)
+  aux_clk       2.426        412.201         (R-R)
+
+Geomean max period: 3.194
+
+Setup (Max) Clock Relationship
+  Launch Clock    Capture Clock   Constraint (ns)     Slack (ns)          Edge
+    sys_clk          sys_clk           10.000            5.794           (R-R)
+    aux_clk          aux_clk           20.000           17.574           (R-R)
+
+Hold (Min) Clock Relationship
+  Launch Clock    Capture Clock   Constraint (ns)     Slack (ns)          Edge
+    sys_clk          sys_clk           0.000            0.095            (R-R)
+    aux_clk          aux_clk           0.000            0.099            (R-R)
+
+INFO     : Write Timing Report to "C:/work/led_showcase\outflow\led_showcase.timing.rpt" ...
+INFO     : final timing analysis took 0.0250458 seconds [FlowMsg::StageDuration]
+INFO     :     final timing analysis took 0.09375 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : final timing analysis virtual memory usage: begin = 728.8 MB, end = 732.216 MB, delta = 3.416 MB [FlowMsg::VMUsage]
+INFO     :     final timing analysis peak virtual memory usage = 1268.496 MB [FlowMsg::VMUsage::Peak]
+INFO     : final timing analysis resident set memory usage: begin = 625.972 MB, end = 629.164 MB, delta = 3.192 MB [FlowMsg::RSSUsage]
+INFO     :     final timing analysis peak resident set memory usage = 1145.172 MB [FlowMsg::RSSUsage::Peak]
+           ***** Ending stage final timing analysis *****
+           
+           ***** Beginning stage bitstream generation ... *****
+INFO     : Reading core interface constraints file "C:/work/led_showcase\outflow\led_showcase.interface.csv" [DBMsg::CoreInterfaceConstraintsFileReading]
+INFO     : Successfully read core interface constraints file "C:/work/led_showcase\outflow\led_showcase.interface.csv" [DBMsg::CoreInterfaceConstraintsFileLoadSuccess]
+INFO     : Finished writing bitstream file work_pnr\led_showcase.lbf.
+INFO     : Bitstream generation took 3.5176352 seconds [FlowMsg::StageDuration]
+INFO     :     Bitstream generation took 3.3125 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Bitstream generation virtual memory usage: begin = 727.224 MB, end = 1264.784 MB, delta = 537.56 MB [FlowMsg::VMUsage]
+INFO     :     Bitstream generation peak virtual memory usage = 1268.496 MB [FlowMsg::VMUsage::Peak]
+INFO     : Bitstream generation resident set memory usage: begin = 626.22 MB, end = 1166.26 MB, delta = 540.04 MB [FlowMsg::RSSUsage]
+INFO     :     Bitstream generation peak resident set memory usage = 1166.26 MB [FlowMsg::RSSUsage::Peak]
+INFO     : The entire flow of EFX_PNR took 14.8954247 seconds [FlowMsg::StageDuration]
+INFO     :     The entire flow of EFX_PNR took 28.59375 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : The entire flow of EFX_PNR virtual memory usage: begin = 20.036 MB, end = 1264.784 MB, delta = 1244.748 MB [FlowMsg::VMUsage]
+INFO     :     The entire flow of EFX_PNR peak virtual memory usage = 1268.496 MB [FlowMsg::VMUsage::Peak]
+INFO     : The entire flow of EFX_PNR resident set memory usage: begin = 22.476 MB, end = 1166.3 MB, delta = 1143.824 MB [FlowMsg::RSSUsage]
+INFO     :     The entire flow of EFX_PNR peak resident set memory usage = 1166.3 MB [FlowMsg::RSSUsage::Peak]

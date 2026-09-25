@@ -1,0 +1,146 @@
+INFO     : Efinix FPGA Synthesis.
+INFO     : Version: 2026.1.132
+INFO     : Compiled: May 29 2026.
+INFO     : 
+INFO     : Copyright (C) 2013 - 2026 Efinix, Inc. All rights reserved.
+
+INFO     : Reading project database "C:/work/led_showcase\led_showcase.xml" [FlowMsg::ProjectDatabaseReading]
+INFO     : Maximum concurrency has been set to 14 [FlowMsg::MaxThreads]
+INFO     : Reading project database "C:/work/led_showcase\led_showcase.xml" [FlowMsg::ProjectDatabaseReading]
+INFO     : ***** Beginning Analysis ... *****
+INFO     : default VHDL library search path is now "C:/Efinity/2026.1/sim_models/vhdl/packages/vhdl_2008" [VHDL-1504]
+INFO     : Restoring all Verilog modules from file 'C:/Efinity/2026.1/sim_models/maplib/perilib_efxlib_parsetree.vdb' [VERI-2484]
+INFO     : Restoring all Verilog modules from file 'C:/Efinity/2026.1/sim_models/maplib/maplib_efxlib_parsetree.vdb' [VERI-2484]
+INFO     : Analyzing Verilog file 'C:/work/led_showcase\rtl\led_showcase_top.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'C:/work/led_showcase\rtl\led_showcase_lib.v' [VERI-1482]
+INFO     : Analyzing Verilog file 'C:/work/led_showcase\rtl\effects.v' [VERI-1482]
+INFO     : Analysis took 0.0051173 seconds [FlowMsg::StageDuration]
+INFO     :     Analysis took 0 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Analysis virtual memory usage: begin = 59.56 MB, end = 59.576 MB, delta = 0.016 MB [FlowMsg::VMUsage]
+INFO     :     Analysis peak virtual memory usage = 59.584 MB [FlowMsg::VMUsage::Peak]
+INFO     : Analysis resident set memory usage: begin = 63.736 MB, end = 66.568 MB, delta = 2.832 MB [FlowMsg::RSSUsage]
+INFO     :     Analysis peak resident set memory usage = 66.568 MB [FlowMsg::RSSUsage::Peak]
+INFO     : ***** Ending Analysis ... *****
+INFO     : ***** Beginning Elaboration ... *****
+INFO     : C:/work/led_showcase\rtl\led_showcase_top.v(11): compiling module 'led_showcase_top' [VERI-1018]
+INFO     : C:/work/led_showcase\rtl\led_showcase_lib.v(4): compiling module 'reset_sync' [VERI-1018]
+INFO     : C:/work/led_showcase\rtl\led_showcase_lib.v(55): compiling module 'button_debounce' [VERI-1018]
+INFO     : C:/work/led_showcase\rtl\led_showcase_lib.v(92): compiling module 'mode_sequencer' [VERI-1018]
+INFO     : C:/work/led_showcase\rtl\led_showcase_lib.v(126): compiling module 'gray_sync' [VERI-1018]
+INFO     : C:/work/led_showcase\rtl\led_showcase_lib.v(18): compiling module 'tick_gen(DIV=500000)' [VERI-1018]
+INFO     : C:/work/led_showcase\rtl\led_showcase_lib.v(42): compiling module 'lfsr16' [VERI-1018]
+INFO     : C:/work/led_showcase\rtl\effects.v(12): compiling module 'effects' [VERI-1018]
+INFO     : C:/work/led_showcase\rtl\led_showcase_lib.v(170): compiling module 'gamma_stage' [VERI-1018]
+INFO     : C:/work/led_showcase\rtl\led_showcase_lib.v(157): compiling module 'gamma_rom' [VERI-1018]
+INFO     : C:/work/led_showcase\rtl\led_showcase_lib.v(162): extracting RAM for identifier 'mem' [VERI-2571]
+INFO     : C:/work/led_showcase\rtl\led_showcase_lib.v(163): readmemh: reading from file 'gamma.hex' [VERI-2855]
+WARNING  : C:/work/led_showcase\rtl\led_showcase_lib.v(162): net 'mem' does not have a driver [VDB-1002]
+INFO     : C:/work/led_showcase\rtl\led_showcase_lib.v(210): compiling module 'pwm_bank' [VERI-1018]
+INFO     : Elaboration took 0.0120558 seconds [FlowMsg::StageDuration]
+INFO     :     Elaboration took 0 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Elaboration virtual memory usage: begin = 59.576 MB, end = 61.632 MB, delta = 2.056 MB [FlowMsg::VMUsage]
+INFO     :     Elaboration peak virtual memory usage = 61.64 MB [FlowMsg::VMUsage::Peak]
+INFO     : Elaboration resident set memory usage: begin = 66.612 MB, end = 69.912 MB, delta = 3.3 MB [FlowMsg::RSSUsage]
+INFO     :     Elaboration peak resident set memory usage = 69.912 MB [FlowMsg::RSSUsage::Peak]
+INFO     : ***** Ending Elaboration ... *****
+INFO     : ... Setting Synthesis Option: mode=speed
+INFO     : ***** Beginning Reading Mapping Library ... *****
+INFO     : Reading Mapping Library took 0.0011595 seconds [FlowMsg::StageDuration]
+INFO     :     Reading Mapping Library took 0 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Reading Mapping Library virtual memory usage: begin = 61.632 MB, end = 61.632 MB, delta = 0 MB [FlowMsg::VMUsage]
+INFO     :     Reading Mapping Library peak virtual memory usage = 61.64 MB [FlowMsg::VMUsage::Peak]
+INFO     : Reading Mapping Library resident set memory usage: begin = 71.08 MB, end = 71.204 MB, delta = 0.124 MB [FlowMsg::RSSUsage]
+INFO     :     Reading Mapping Library peak resident set memory usage = 71.204 MB [FlowMsg::RSSUsage::Peak]
+INFO     : ***** Ending Reading Mapping Library ... *****
+INFO     : ... Pre-synthesis checks begin
+WARNING  : Removing redundant signal : i[31:0]. (C:/work/led_showcase\rtl\led_showcase_lib.v:137) [EFX-0200]
+WARNING  : Removing redundant signal : rnd[14:11]. (C:/work/led_showcase\rtl\effects.v:17) [EFX-0200]
+WARNING  : Removing redundant signal : rnd[7:3]. (C:/work/led_showcase\rtl\effects.v:17) [EFX-0200]
+WARNING  : Removing redundant signal : decay[7:0]. (C:/work/led_showcase\rtl\effects.v:36) [EFX-0200]
+WARNING  : Removing redundant signal : decay.v[7:0]. (C:/work/led_showcase\rtl\effects.v:36) [EFX-0200]
+WARNING  : Removing redundant signal : decay.sh[2:0]. (C:/work/led_showcase\rtl\effects.v:36) [EFX-0200]
+WARNING  : Removing redundant signal : approach[7:0]. (C:/work/led_showcase\rtl\effects.v:41) [EFX-0200]
+WARNING  : Removing redundant signal : approach.v[7:0]. (C:/work/led_showcase\rtl\effects.v:41) [EFX-0200]
+WARNING  : Removing redundant signal : approach.target[7:0]. (C:/work/led_showcase\rtl\effects.v:41) [EFX-0200]
+WARNING  : Removing redundant signal : approach.step[7:0]. (C:/work/led_showcase\rtl\effects.v:41) [EFX-0200]
+WARNING  : Removing redundant signal : triangle[7:0]. (C:/work/led_showcase\rtl\effects.v:48) [EFX-0200]
+WARNING  : Removing redundant signal : triangle.x[7:0]. (C:/work/led_showcase\rtl\effects.v:48) [EFX-0200]
+WARNING  : Removing redundant signal : i[31:0]. (C:/work/led_showcase\rtl\effects.v:65) [EFX-0200]
+WARNING  : Removing redundant signal : i[31:0]. (C:/work/led_showcase\rtl\led_showcase_lib.v:220) [EFX-0200]
+INFO     : ... Pre-synthesis checks end (Real time : 0s)
+INFO     : ... NameSpace init begin
+INFO     : ... NameSpace init end (Real time : 0s)
+INFO     : ... Mapping design "led_showcase_top"
+INFO     : ... Hierarchical pre-synthesis "reset_sync" begin
+INFO     : ... Hierarchical pre-synthesis "reset_sync" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "button_debounce" begin
+INFO     : ... Hierarchical pre-synthesis "button_debounce" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "mode_sequencer" begin
+INFO     : ... Hierarchical pre-synthesis "mode_sequencer" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "gray_sync" begin
+INFO     : ... Hierarchical pre-synthesis "gray_sync" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "tick_gen(DIV=500000)" begin
+INFO     : ... Hierarchical pre-synthesis "tick_gen(DIV=500000)" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "lfsr16" begin
+INFO     : ... Hierarchical pre-synthesis "lfsr16" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "effects" begin
+INFO     : ... Hierarchical pre-synthesis "effects" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "gamma_rom" begin
+INFO     : ... Hierarchical pre-synthesis "gamma_rom" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "gamma_stage" begin
+INFO     : ... Hierarchical pre-synthesis "gamma_stage" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "pwm_bank" begin
+INFO     : ... Hierarchical pre-synthesis "pwm_bank" end (Real time : 0s)
+INFO     : ... Hierarchical pre-synthesis "led_showcase_top" begin
+INFO     : ... Clock Enable Synthesis Performed on 157 flops.
+INFO     : ... Hierarchical pre-synthesis "led_showcase_top" end (Real time : 0s)
+INFO     : ... Flat optimizations begin
+INFO     : ... Flat optimizations end (Real time : 0s)
+INFO     : ... Flat synthesis begin
+INFO     : ... Flat synthesis end (Real time : 0s)
+INFO     : ... Flat optimizations begin
+INFO     : ... Flat optimizations end (Real time : 0s)
+INFO     : ... Check and break combinational loops begin
+INFO     : ... Check and break combinational loops end (Real time : 0s)
+INFO     : ... Sequential Optimization begin
+INFO     : ... Clock Network 'sys_clk' with 258 loads will be considered for sequential optimization.
+INFO     : ... Clock Network 'aux_clk' with 85 loads will be considered for sequential optimization.
+INFO     : ... Sequential Optimization deduced 266 equivalent points.
+INFO     : ... Sequential Optimization end (Real time : 1s)
+INFO     : ... Setup for logic synthesis begin
+INFO     : ... Setup for logic synthesis end (Real time : 0s)
+INFO     : ... LUT mapping begin
+INFO     : ... LS, strategy: 3, nd: 1191, ed: 4119, lv: 6, pw: 2212.25
+INFO     : ... LUT mapping end (Real time : 2s)
+INFO     : ... Post-synthesis Verific netlist creation begin
+INFO     : ... Post-synthesis Verific netlist creation end (Real time : 1s)
+INFO     : ... Postmap Retiming Optimization begin
+INFO     : ... Using advanced retiming technique.
+INFO     : ... Clock Network 'sys_clk~sys_clk' with 253 loads will be considered for retiming optimization.
+INFO     : ... Clock Network 'aux_clk~aux_clk' with 85 loads will be considered for retiming optimization.
+INFO     : ... Performed 1 retime moves.
+INFO     : ... Postmap Retiming Optimization end (Real time : 0s)
+INFO     : ***** Beginning VDB Netlist Checker ... *****
+INFO     : VDB Netlist Checker took 0.0012075 seconds [FlowMsg::StageDuration]
+INFO     :     VDB Netlist Checker took 0 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : VDB Netlist Checker virtual memory usage: begin = 92.604 MB, end = 92.604 MB, delta = 0 MB [FlowMsg::VMUsage]
+INFO     :     VDB Netlist Checker peak virtual memory usage = 158.076 MB [FlowMsg::VMUsage::Peak]
+INFO     : VDB Netlist Checker resident set memory usage: begin = 104.7 MB, end = 104.748 MB, delta = 0.048 MB [FlowMsg::RSSUsage]
+INFO     :     VDB Netlist Checker peak resident set memory usage = 154.356 MB [FlowMsg::RSSUsage::Peak]
+INFO     : ***** Ending VDB Netlist Checker ... *****
+INFO     : Resource Summary 
+INFO     : ======================================= 
+INFO     : EFX_ADD                 : 	503
+INFO     : EFX_LUT4                : 	1189
+INFO     : EFX_FF                  : 	343
+INFO     : EFX_RAM10               : 	1
+INFO     : ======================================= 
+INFO     : ... Post-Map Verilog Writer begin
+INFO     : Writing netlist 'led_showcase_top' to Verilog file 'C:/work/led_showcase\outflow\led_showcase.map.v' [VDB-1030]
+INFO     : ... Post-Map Verilog Writer end (Real time : 0s)
+INFO     : The entire flow of EFX_MAP took 4.1116651 seconds [FlowMsg::StageDuration]
+INFO     :     The entire flow of EFX_MAP took 4.234375 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : The entire flow of EFX_MAP virtual memory usage: begin = 19.02 MB, end = 101.092 MB, delta = 82.072 MB [FlowMsg::VMUsage]
+INFO     :     The entire flow of EFX_MAP peak virtual memory usage = 158.076 MB [FlowMsg::VMUsage::Peak]
+INFO     : The entire flow of EFX_MAP resident set memory usage: begin = 19.568 MB, end = 111.192 MB, delta = 91.624 MB [FlowMsg::RSSUsage]
+INFO     :     The entire flow of EFX_MAP peak resident set memory usage = 154.356 MB [FlowMsg::RSSUsage::Peak]

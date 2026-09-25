@@ -1,0 +1,22 @@
+INFO     : Efinix FPGA Bitstream Generator.
+INFO     : Version: 2026.1.132 
+INFO     : Copyright (C) 2013 - 2026 Efinix, Inc. All rights reserved.
+INFO     : Compiled: May 29 2026.
+INFO     : Using source file "C:/work/led_showcase\work_pnr\led_showcase.lbf"
+INFO     : Generating HEX programming file for device "Ti375N1156", family "Titanium"
+INFO     : Using periphery source file "C:/work/led_showcase\outflow\led_showcase.lpf"
+INFO     : Generating bit file: "C:/work/led_showcase\outflow\led_showcase.bit"
+INFO     : HEX Generation Options Summary:
+INFO     : 	Listing options specified to bitstream generation:
+INFO     : 	remote_update_retries                    = 0x3
+INFO     : 	enable_remote_update                     = off
+INFO     : 	enable_seu_crc_check                     = off
+INFO     : 	seu_mode                                 = automatic
+INFO     : 	seu_wait_interval                        = 0xFFFFFF
+INFO     : Finished generating "C:/work/led_showcase\outflow\led_showcase.hex"
+INFO     : Efinix Bitstream Generator took 21.1858209 seconds [FlowMsg::StageDuration]
+INFO     :     Efinix Bitstream Generator took 20.390625 seconds (approximately) in total CPU time [FlowMsg::StageDuration::CPUTime]
+INFO     : Efinix Bitstream Generator virtual memory usage: begin = 2.632 MB, end = 14.616 MB, delta = 11.984 MB [FlowMsg::VMUsage]
+INFO     :     Efinix Bitstream Generator peak virtual memory usage = 809.164 MB [FlowMsg::VMUsage::Peak]
+INFO     : Efinix Bitstream Generator resident set memory usage: begin = 9.312 MB, end = 23.104 MB, delta = 13.792 MB [FlowMsg::RSSUsage]
+INFO     :     Efinix Bitstream Generator peak resident set memory usage = 794.336 MB [FlowMsg::RSSUsage::Peak]

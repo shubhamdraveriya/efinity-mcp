@@ -1,0 +1,20 @@
+sep=\t
+Module Resource Usage Distribution Estimates
+Generated at: Sep 25, 2026 12:37:19
+
+Note: some resources maybe grouped under different hierarchy due to optimization and LUT mapping
+
+Module	       FFs	      SRLs	      ADDs	       LUTs	    COMB4s	      RAMs	 DSP/MULTs
+led_showcase_top:led_showcase_top  	   343(1)	     0(0)	   503(0)	   1189(0)	     0(0)	     1(0)	     0(0)	
+ +u_rst_sys:reset_sync             	     3(3)	     0(0)	     0(0)	      0(0)	     0(0)	     0(0)	     0(0)	
+ +u_rst_aux:reset_sync             	     3(3)	     0(0)	     0(0)	      0(0)	     0(0)	     0(0)	     0(0)	
+ +u_btn_next:button_debounce       	   23(23)	     0(0)	   18(18)	      9(9)	     0(0)	     0(0)	     0(0)	
+ +u_btn_pause:button_debounce      	   23(23)	     0(0)	   18(18)	      9(9)	     0(0)	     0(0)	     0(0)	
+ +u_seq:mode_sequencer             	   36(36)	     0(0)	   28(28)	    15(15)	     0(0)	     0(0)	     0(0)	
+ +u_mode_cdc:gray_sync             	     9(9)	     0(0)	     0(0)	      2(2)	     0(0)	     0(0)	     0(0)	
+ +u_frame:tick_gen(DIV=500000)     	   20(20)	     0(0)	   18(18)	      6(6)	     0(0)	     0(0)	     0(0)	
+ +u_lfsr:lfsr16                    	   16(16)	     0(0)	     0(0)	      1(1)	     0(0)	     0(0)	     0(0)	
+ +u_fx:effects                     	   96(96)	     0(0)	 414(414)	1051(1051)	     0(0)	     0(0)	     0(0)	
+ +u_gamma:gamma_stage              	   56(56)	     0(0)	     0(0)	    44(44)	     0(0)	     1(0)	     0(0)	
+  +u_rom:gamma_rom                 	     0(0)	     0(0)	     0(0)	      0(0)	     0(0)	     1(1)	     0(0)	
+ +u_pwm:pwm_bank                   	   57(57)	     0(0)	     7(7)	    52(52)	     0(0)	     0(0)	     0(0)	

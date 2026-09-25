@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<efx:tool_report xmlns:efx="http://www.efinixinc.com/tool_report" date="2026-09-25 12:37" project="led_showcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efinixinc.com/tool_report tool_report.xsd">
+  <efx:group name="Periphery Resource">
+    <efx:group_data name="DDR" severity="info" value="0 / 2"/>
+    <efx:group_data name="GPIO" severity="info" value="1 / 103"/>
+    <efx:group_data name="HSIO" severity="info" value="4.0 / 117"/>
+    <efx:group_data name="JTAG User TAP" severity="info" value="0 / 4"/>
+    <efx:group_data name="MIPI RX" severity="info" value="0 / 3"/>
+    <efx:group_data name="MIPI TX" severity="info" value="0 / 3"/>
+    <efx:group_data name="Oscillator" severity="info" value="0 / 1"/>
+    <efx:group_data name="PCI Express" severity="info" value="0 / 2"/>
+    <efx:group_data name="PLL" severity="info" value="1 / 12"/>
+    <efx:group_data name="Quad" severity="info" value="0 / 2"/>
+    <efx:group_data name="Quad-Core Risc-V Processor" severity="info" value="0 / 1"/>
+  </efx:group>
+</efx:tool_report>
