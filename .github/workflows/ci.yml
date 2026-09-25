@@ -20,7 +20,7 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: python -m pip install -e ".[dev]"
       - run: ruff check .
-      - run: pytest -v   # unit tests only; tests marked 'efinity' need a local Efinity install
+      - run: pytest -v -m "not efinity"
 
   build:
     runs-on: ubuntu-latest
